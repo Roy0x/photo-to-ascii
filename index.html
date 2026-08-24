@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ASCII Cam</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <h1>ASCII CAM</h1>
+
+    <p>Turn any photo into ASCII art.</p>
+
+    <label class="upload">
+      📷 Take / Choose Photo
+
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        capture="environment"
+      >
+    </label>
+
+    <img id="preview">
+
+    <div class="controls">
+
+      <label>
+        Detail
+        <input
+          type="range"
+          id="widthSlider"
+          min="30"
+          max="120"
+          value="70"
+        >
+      </label>
+
+      <button id="copyButton">
+        Copy ASCII
+      </button>
+
+    </div>
+
+    <pre id="ascii">
+Your ASCII art will appear here.
+    </pre>
+
+    <canvas id="canvas"></canvas>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
